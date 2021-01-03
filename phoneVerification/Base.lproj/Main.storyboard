@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxe-Am-cd4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Verification View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartVerificationViewController" customModule="phoneVerification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page" translatesAutoresizingMaskIntoConstraints="NO" id="2OW-Gl-dm1">
+                                <rect key="frame" x="59.5" y="148" width="295" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="4RM-Ju-Hxk"/>
+                                    <constraint firstAttribute="width" constant="295" id="iAs-Ee-rNd"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bhx-y1-HRW">
+                                <rect key="frame" x="20" y="391" width="374" height="114"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-CM-Okm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdt-c7-J1n">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Z-6u-5y8">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="30"/>
+                                        <state key="normal" title="Send Verification Code"/>
+                                        <connections>
+                                            <action selector="sendVerification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c81-d9-DPh"/>
+                                            <segue destination="tps-FH-Oge" kind="show" id="mIe-bh-GEy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bhx-y1-HRW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GcP-JE-3mn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bhx-y1-HRW" secondAttribute="trailing" constant="20" id="NTc-y9-mYM"/>
+                            <constraint firstItem="Bhx-y1-HRW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fD2-bL-rTK"/>
+                            <constraint firstItem="2OW-Gl-dm1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jNj-1N-PvD"/>
+                            <constraint firstItem="2OW-Gl-dm1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="ssW-Vg-Aok"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YBC-GP-EbA"/>
+                    <connections>
+                        <outlet property="countryCodeField" destination="XKx-CM-Okm" id="Oz1-Ue-3o4"/>
+                        <outlet property="phoneNumberField" destination="Pdt-c7-J1n" id="NYn-9M-CW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="77.678571428571431"/>
+        </scene>
+        <!--Check Verification View Controller-->
+        <scene sceneID="hfo-1p-Lmz">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tps-FH-Oge" customClass="CheckVerificationViewController" customModule="phoneVerification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tj-LI-vvm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7WF-3Y-NZK">
+                                <rect key="frame" x="15" y="398" width="384" height="100.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4-Digit Verification Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEs-E5-opg">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4c-gr-8FL">
+                                        <rect key="frame" x="0.0" y="42" width="384" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSB-mH-tPM">
+                                        <rect key="frame" x="0.0" y="70.5" width="384" height="30"/>
+                                        <state key="normal" title="Verify"/>
+                                        <connections>
+                                            <action selector="validateCode:" destination="tps-FH-Oge" eventType="touchUpInside" id="V1z-Ar-g6f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PE3-mw-H5T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7WF-3Y-NZK" firstAttribute="centerY" secondItem="9tj-LI-vvm" secondAttribute="centerY" id="8Dt-3r-DQf"/>
+                            <constraint firstItem="7WF-3Y-NZK" firstAttribute="leading" secondItem="PE3-mw-H5T" secondAttribute="leading" constant="15" id="QbF-UX-Vi0"/>
+                            <constraint firstItem="PE3-mw-H5T" firstAttribute="trailing" secondItem="7WF-3Y-NZK" secondAttribute="trailing" constant="15" id="XEv-hn-og1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YKX-rt-c4d"/>
+                    <connections>
+                        <outlet property="codeField" destination="bEs-E5-opg" id="o19-Mb-4T0"/>
+                        <outlet property="errorLabel" destination="w4c-gr-8FL" id="D0x-6K-XDO"/>
+                        <segue destination="FAh-Dc-586" kind="presentation" identifier="successSegue" id="00k-h0-dft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aV7-xN-kGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="78"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="rYG-KJ-HIA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="FAh-Dc-586" customClass="MapViewController" customModule="phoneVerification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YvO-ON-fwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-nk-ABO" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z5K-yx-HMk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cya-nk-ABO" firstAttribute="trailing" secondItem="z5K-yx-HMk" secondAttribute="trailing" id="Q4w-HH-Ehr"/>
+                            <constraint firstAttribute="bottom" secondItem="Cya-nk-ABO" secondAttribute="bottom" id="WVW-ME-CdP"/>
+                            <constraint firstItem="Cya-nk-ABO" firstAttribute="top" secondItem="YvO-ON-fwJ" secondAttribute="top" id="p1Z-7z-UYf"/>
+                            <constraint firstItem="Cya-nk-ABO" firstAttribute="leading" secondItem="z5K-yx-HMk" secondAttribute="leading" id="tgq-52-7IS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Cya-nk-ABO" id="cKz-Oq-6Po"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZa-rG-96Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295.6521739130435" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cEt-nk-bjF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bxe-Am-cd4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j2l-eo-BCK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lok-ZU-g3Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeB-Et-flL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="page" width="1000" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

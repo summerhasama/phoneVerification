@@ -3,18 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2727C3F125A1579600E695FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C3F025A1579600E695FD /* AppDelegate.swift */; };
 		2727C3F325A1579600E695FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C3F225A1579600E695FD /* SceneDelegate.swift */; };
-		2727C3F525A1579600E695FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C3F425A1579600E695FD /* ViewController.swift */; };
+		2727C3F525A1579600E695FD /* StartVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C3F425A1579600E695FD /* StartVerificationViewController.swift */; };
 		2727C3F825A1579600E695FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C3F625A1579600E695FD /* Main.storyboard */; };
 		2727C3FA25A1579700E695FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2727C3F925A1579700E695FD /* Assets.xcassets */; };
 		2727C3FD25A1579700E695FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C3FB25A1579700E695FD /* LaunchScreen.storyboard */; };
 		2727C40825A1579700E695FD /* phoneVerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C40725A1579700E695FD /* phoneVerificationTests.swift */; };
 		2727C41325A1579700E695FD /* phoneVerificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C41225A1579700E695FD /* phoneVerificationUITests.swift */; };
+		2727C42A25A15A2400E695FD /* VerifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C42925A15A2400E695FD /* VerifyAPI.swift */; };
+		2727C42F25A15B5D00E695FD /* CheckVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C42E25A15B5D00E695FD /* CheckVerificationViewController.swift */; };
+		2727C43425A15C8300E695FD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2727C43325A15C8300E695FD /* Config.plist */; };
+		2727C44325A15DEC00E695FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C44225A15DEC00E695FD /* MapViewController.swift */; };
+		B90E4743A1610AB88894A7F8 /* Pods_phoneVerificationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8D4399A56BC14553D01564 /* Pods_phoneVerificationTests.framework */; };
+		BD0843779ECA680C766FFA57 /* Pods_phoneVerification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A74F1A585E0C41757C12BF /* Pods_phoneVerification.framework */; };
+		F8165728D21E987E4EB0F41C /* Pods_phoneVerification_phoneVerificationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B4719A0A3C452182AC837C /* Pods_phoneVerification_phoneVerificationUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08B4719A0A3C452182AC837C /* Pods_phoneVerification_phoneVerificationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_phoneVerification_phoneVerificationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2727C3ED25A1579600E695FD /* phoneVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2727C3F025A1579600E695FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2727C3F225A1579600E695FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2727C3F425A1579600E695FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2727C3F425A1579600E695FD /* StartVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVerificationViewController.swift; sourceTree = "<group>"; };
 		2727C3F725A1579600E695FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2727C3F925A1579700E695FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2727C3FC25A1579700E695FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,18 @@
 		2727C40E25A1579700E695FD /* phoneVerificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = phoneVerificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2727C41225A1579700E695FD /* phoneVerificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneVerificationUITests.swift; sourceTree = "<group>"; };
 		2727C41425A1579700E695FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2727C42925A15A2400E695FD /* VerifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAPI.swift; sourceTree = "<group>"; };
+		2727C42E25A15B5D00E695FD /* CheckVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVerificationViewController.swift; sourceTree = "<group>"; };
+		2727C43325A15C8300E695FD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		2727C44225A15DEC00E695FD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4A8D4399A56BC14553D01564 /* Pods_phoneVerificationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_phoneVerificationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF95C8B2D4119570D33DB37 /* Pods-phoneVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerification.release.xcconfig"; path = "Target Support Files/Pods-phoneVerification/Pods-phoneVerification.release.xcconfig"; sourceTree = "<group>"; };
+		76E8F5C14F8DB5AC1B39B0CB /* Pods-phoneVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerificationTests.debug.xcconfig"; path = "Target Support Files/Pods-phoneVerificationTests/Pods-phoneVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD7AA58C62245A5F2210ED5C /* Pods-phoneVerification-phoneVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerification-phoneVerificationUITests.release.xcconfig"; path = "Target Support Files/Pods-phoneVerification-phoneVerificationUITests/Pods-phoneVerification-phoneVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D46980EA655325EE002F0077 /* Pods-phoneVerificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerificationTests.release.xcconfig"; path = "Target Support Files/Pods-phoneVerificationTests/Pods-phoneVerificationTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8705EDE9D1C6254F9F842E4 /* Pods-phoneVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerification.debug.xcconfig"; path = "Target Support Files/Pods-phoneVerification/Pods-phoneVerification.debug.xcconfig"; sourceTree = "<group>"; };
+		E6A74F1A585E0C41757C12BF /* Pods_phoneVerification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_phoneVerification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C0584417B38C89AB2970EF /* Pods-phoneVerification-phoneVerificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phoneVerification-phoneVerificationUITests.debug.xcconfig"; path = "Target Support Files/Pods-phoneVerification-phoneVerificationUITests/Pods-phoneVerification-phoneVerificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0843779ECA680C766FFA57 /* Pods_phoneVerification.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90E4743A1610AB88894A7F8 /* Pods_phoneVerificationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8165728D21E987E4EB0F41C /* Pods_phoneVerification_phoneVerificationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9A79569F3694AE836B7751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6A74F1A585E0C41757C12BF /* Pods_phoneVerification.framework */,
+				08B4719A0A3C452182AC837C /* Pods_phoneVerification_phoneVerificationUITests.framework */,
+				4A8D4399A56BC14553D01564 /* Pods_phoneVerificationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2727C3E425A1579600E695FD = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				2727C40625A1579700E695FD /* phoneVerificationTests */,
 				2727C41125A1579700E695FD /* phoneVerificationUITests */,
 				2727C3EE25A1579600E695FD /* Products */,
+				C7F9576D1AD1CF2F49922BFE /* Pods */,
+				1D9A79569F3694AE836B7751 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +136,15 @@
 			children = (
 				2727C3F025A1579600E695FD /* AppDelegate.swift */,
 				2727C3F225A1579600E695FD /* SceneDelegate.swift */,
-				2727C3F425A1579600E695FD /* ViewController.swift */,
+				2727C3F425A1579600E695FD /* StartVerificationViewController.swift */,
 				2727C3F625A1579600E695FD /* Main.storyboard */,
 				2727C3F925A1579700E695FD /* Assets.xcassets */,
 				2727C3FB25A1579700E695FD /* LaunchScreen.storyboard */,
 				2727C3FE25A1579700E695FD /* Info.plist */,
+				2727C42925A15A2400E695FD /* VerifyAPI.swift */,
+				2727C42E25A15B5D00E695FD /* CheckVerificationViewController.swift */,
+				2727C43325A15C8300E695FD /* Config.plist */,
+				2727C44225A15DEC00E695FD /* MapViewController.swift */,
 			);
 			path = phoneVerification;
 			sourceTree = "<group>";
@@ -128,6 +167,19 @@
 			path = phoneVerificationUITests;
 			sourceTree = "<group>";
 		};
+		C7F9576D1AD1CF2F49922BFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8705EDE9D1C6254F9F842E4 /* Pods-phoneVerification.debug.xcconfig */,
+				4DF95C8B2D4119570D33DB37 /* Pods-phoneVerification.release.xcconfig */,
+				E8C0584417B38C89AB2970EF /* Pods-phoneVerification-phoneVerificationUITests.debug.xcconfig */,
+				BD7AA58C62245A5F2210ED5C /* Pods-phoneVerification-phoneVerificationUITests.release.xcconfig */,
+				76E8F5C14F8DB5AC1B39B0CB /* Pods-phoneVerificationTests.debug.xcconfig */,
+				D46980EA655325EE002F0077 /* Pods-phoneVerificationTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2727C41725A1579700E695FD /* Build configuration list for PBXNativeTarget "phoneVerification" */;
 			buildPhases = (
+				777AE34B37EB89C5C28F8619 /* [CP] Check Pods Manifest.lock */,
 				2727C3E925A1579600E695FD /* Sources */,
 				2727C3EA25A1579600E695FD /* Frameworks */,
 				2727C3EB25A1579600E695FD /* Resources */,
+				29D4093BA4A6A5FCD44A624F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2727C41A25A1579700E695FD /* Build configuration list for PBXNativeTarget "phoneVerificationTests" */;
 			buildPhases = (
+				49A3FF048335F2C14CFBEA3C /* [CP] Check Pods Manifest.lock */,
 				2727C3FF25A1579700E695FD /* Sources */,
 				2727C40025A1579700E695FD /* Frameworks */,
 				2727C40125A1579700E695FD /* Resources */,
@@ -170,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2727C41D25A1579700E695FD /* Build configuration list for PBXNativeTarget "phoneVerificationUITests" */;
 			buildPhases = (
+				86BB5AD9CE7FB2AC08413922 /* [CP] Check Pods Manifest.lock */,
 				2727C40A25A1579700E695FD /* Sources */,
 				2727C40B25A1579700E695FD /* Frameworks */,
 				2727C40C25A1579700E695FD /* Resources */,
+				B5E75D985C3236EC46BB75ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2727C43425A15C8300E695FD /* Config.plist in Resources */,
 				2727C3FD25A1579700E695FD /* LaunchScreen.storyboard in Resources */,
 				2727C3FA25A1579700E695FD /* Assets.xcassets in Resources */,
 				2727C3F825A1579600E695FD /* Main.storyboard in Resources */,
@@ -253,12 +311,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29D4093BA4A6A5FCD44A624F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-phoneVerification/Pods-phoneVerification-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-phoneVerification/Pods-phoneVerification-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-phoneVerification/Pods-phoneVerification-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49A3FF048335F2C14CFBEA3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-phoneVerificationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		777AE34B37EB89C5C28F8619 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-phoneVerification-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86BB5AD9CE7FB2AC08413922 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-phoneVerification-phoneVerificationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5E75D985C3236EC46BB75ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-phoneVerification-phoneVerificationUITests/Pods-phoneVerification-phoneVerificationUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-phoneVerification-phoneVerificationUITests/Pods-phoneVerification-phoneVerificationUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-phoneVerification-phoneVerificationUITests/Pods-phoneVerification-phoneVerificationUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2727C3E925A1579600E695FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2727C3F525A1579600E695FD /* ViewController.swift in Sources */,
+				2727C42F25A15B5D00E695FD /* CheckVerificationViewController.swift in Sources */,
+				2727C44325A15DEC00E695FD /* MapViewController.swift in Sources */,
+				2727C3F525A1579600E695FD /* StartVerificationViewController.swift in Sources */,
+				2727C42A25A15A2400E695FD /* VerifyAPI.swift in Sources */,
 				2727C3F125A1579600E695FD /* AppDelegate.swift in Sources */,
 				2727C3F325A1579600E695FD /* SceneDelegate.swift in Sources */,
 			);
@@ -433,6 +597,7 @@
 		};
 		2727C41825A1579700E695FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8705EDE9D1C6254F9F842E4 /* Pods-phoneVerification.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +617,7 @@
 		};
 		2727C41925A1579700E695FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF95C8B2D4119570D33DB37 /* Pods-phoneVerification.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +637,7 @@
 		};
 		2727C41B25A1579700E695FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E8F5C14F8DB5AC1B39B0CB /* Pods-phoneVerificationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +660,7 @@
 		};
 		2727C41C25A1579700E695FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46980EA655325EE002F0077 /* Pods-phoneVerificationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +683,7 @@
 		};
 		2727C41E25A1579700E695FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C0584417B38C89AB2970EF /* Pods-phoneVerification-phoneVerificationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +704,7 @@
 		};
 		2727C41F25A1579700E695FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD7AA58C62245A5F2210ED5C /* Pods-phoneVerification-phoneVerificationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
